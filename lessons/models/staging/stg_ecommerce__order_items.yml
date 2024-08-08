@@ -8,17 +8,11 @@ models:
         enforced: true
     columns:
       - name: order_item_id
+        data_type: INTEGER
         # Model tests (run AFTER model is built)
         tests:
-          - not_null:
+          - primary_key:
               severity: error
-          - unique:
-              severity: error
-        # Model contract (run BEFORE model is built)
-        data_type: INTEGER
-        constraints:
-          # Note - we could get rid of the not_null check above as it basically duplicates the contract
-          - type: not_null
 
       - name: order_id
         data_type: INTEGER
