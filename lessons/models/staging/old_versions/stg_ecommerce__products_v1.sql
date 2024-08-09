@@ -12,6 +12,5 @@ SELECT
 	cost,
 	retail_price,
 	department,
-	brand
 
 FROM source
